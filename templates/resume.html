@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+{% load static %}
+{% block content %}
+    <br>
+    <div class="container text-center">
+        <div class="row">
+            <div class="col">
+                <img src="{% static 'images/congrat.jpg' %}" width="350px" height="250">
+                <br><br>
+                <p class="fs-2 rounded-3  bg-primary">ประวัติส่วนตัว </p>
+                <div class="border border-primary rounded-4">
+                    <p class="fs-5">ชื่อ : นางสาววรรณดา เมฆจินดา </p>
+                    <p class="fs-5">ชื่อเล่น :อุ้ม อายุ : 21 ปี </p>
+                    <p class="fs-5">เพศ : หญิง สัญชาติ : ไทย ศาสนา : พุทธ </p>
+                    <p class="fs-5">เกิดวันที่ 8 กันยายน 2544 </p>
+                </div>
+                <img src="{% static 'images/hello.gif' %}" width="350px" height="250">
+            </div>
+
+
+            <div class="col">
+               <p class="fs-2 rounded-3  bg-primary"> ที่อยู่ </p>
+                <div class="border border-primary rounded-4">
+                    <p class="fs-5">บ้านเลขที่ 319/162 ชุมชนมิตรภาพเก่าน้อย </p>
+                    <p class="fs-5">ซอย 3 ตำบลหนองบัว อำเภอเมือง</p>
+                    <p class="fs-5">จังหวัดอุดรธานี 41000</p>
+
+                </div>
+                <br>
+                    <p class="fs-2 rounded-3  bg-primary">ครอบครัว </p>
+                <div class="border border-primary rounded-4">
+                    <p class="fs-5">ชื่อมารดา : นางสาวน้องนุด ริดพันธุ์ </p>
+                    <p class="fs-5">ชื่อบิดา : นายกิตติชัย เมฆจินดา </p>
+                    <p class="fs-5">เป็นบุตรคนที่ 1 มีน้องชาย 1 คน  </p>
+                    <p class="fs-5">ชื่อนางชาย : ภานุพงษ์ เมฆจินดา</p>
+                </div>
+                <br>
+                 <p class="fs-2 rounded-3  bg-primary">ช่องทางการติดต่อ </p>
+                <div class="border border-primary rounded-4">
+                    <p class="fs-5">เบอร์โทร : 097-1034340 </p>
+                    <p class="fs-5">Email : wannada.me@rmuti.ac.th </p>
+                    <p class="fs-5">Facebook : Wannada Mekjinda</p>
+                    <p class="fs-5">Instagram : Wannada Mekjinda</p>
+                </div>
+            </div>
+        </div>
+    </div>
+<br>
+    <div class="container text-center bg-info text-white fs-4">
+        <div class="row">
+            <div class="col">
+                ผู้จัดทำเว็บไซต์ <br>
+                นางสาววรรณดา เมฆจินดา 65342310197-3 BIS3R2
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

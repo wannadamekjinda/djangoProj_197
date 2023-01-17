@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+{% load static %}
+{% block content %}
+    <br>
+    <p class="fs-2 rounded-3  bg-primary text-white text-center">สิ่งที่สนใจ </p>
+    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="10000">
+      <img src="{% static 'images/python.png' %}" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item" data-bs-interval="2000">
+      <img src="{% static 'images/django.png' %}" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'images/java.jpg' %}" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Python คืออะไร ?</h5>
+            <p class="card-text">Python เป็นภาษาการเขียนโปรแกรมที่ใช้อย่างแพร่หลายในเว็บแอปพลิเคชัน การพัฒนาซอฟต์แวร์
+                วิทยาศาสตร์ข้อมูล และแมชชีนเลิร์นนิง (ML) นักพัฒนาใช้ Python เนื่องจากมีประสิทธิภาพ เรียนรู้ง่าย
+                และสามารถทำงานบนแพลตฟอร์มต่างๆ ได้มากมาย ทั้งนี้ซอฟต์แวร์ Python สามารถดาวน์โหลดได้ฟรี
+                ผสานการทำงานร่วมกับระบบทุกประเภท และเพิ่มความเร็วในการพัฒนา</p>
+            <a href="https://aws.amazon.com/th/what-is/python/" class="btn btn-primary">อ่านเพิ่มเติม</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Django คืออะไร ?</h5>
+            <p class="card-text"> Django คือโปรแกรม OpenSource สำหรับพัฒนา web application ซึ่งเขียนในภาษา Python
+                โดย Djangoมีเป้าหมายหลักในการทำให้การสร้าง website ที่ทำงานร่วมกับ database และมีความซับซ้อน
+                ให้ง่ายขึ้นโดยจะมีการพัฒนาด้วยภาษา python ตลอดทั้ง application ซึ่งรวมถึงการ setting, files ต่างๆ, และ
+                Data model ด้วย</p>
+            <a href="https://www.mindphp.com/%E0%B8%84%E0%B8%B9%E0%B9%88%E0%B8%A1%E0%B8%B7%E0%B8%AD/73-%E0%B8%84%E0%B8%B7%E0%B8%AD%E0%B8%AD%E0%B8%B0%E0%B9%84%E0%B8%A3/2442-django-%E0%B8%84%E0%B8%B7%E0%B8%AD%E0%B8%AD%E0%B8%B0%E0%B9%84%E0%B8%A3.html#:~:text=Django%20%E0%B8%84%E0%B8%B7%E0%B8%AD%E0%B9%82%E0%B8%9B%E0%B8%A3%E0%B9%81%E0%B8%81%E0%B8%A3%E0%B8%A1%20OpenSource%20%E0%B8%AA%E0%B8%B3%E0%B8%AB%E0%B8%A3%E0%B8%B1%E0%B8%9A,%E0%B8%95%E0%B9%88%E0%B8%B2%E0%B8%87%E0%B9%86%2C%20%E0%B9%81%E0%B8%A5%E0%B8%B0%20Data%20model%20%E0%B8%94%E0%B9%89%E0%B8%A7%E0%B8%A2"
+               class="btn btn-primary">อ่านเพิ่มเติม</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">JAVA คืออะไร ?</h5>
+            <p class="card-text"> Java เป็นภาษาการเขียนโปรแกรมที่ใช้กันอย่างแพร่หลายสำหรับการเขียนโค้ดเว็บแอปพลิเคชัน ซึ่งเป็นตัวเลือกที่ได้รับความนิยมในหมู่นักพัฒนามากว่าสองทศวรรษ โดยมีการใช้งานแอปพลิเคชัน Java หลายล้านรายการในปัจจุบัน Java เป็นภาษาแบบหลายแพลตฟอร์ม เชิงวัตถุ และใช้เครือข่ายเป็นศูนย์กลางที่สามารถใช้เป็นแพลตฟอร์มได้ในตัวเอง ซึ่งเป็นภาษาการเขียนโปรแกรมที่รวดเร็ว ปลอดภัย และเชื่อถือได้สำหรับการเขียนโค้ดทุกประเภทตั้งแต่แอปมือถือและซอฟต์แวร์ระดับองค์กร ไปจนถึงแอปพลิเคชัน Big Data และเทคโนโลยีฝั่งเซิร์ฟเวอร์</p>
+            <a href="https://aws.amazon.com/th/what-is/java/" class="btn btn-primary">อ่านเพิ่มเติม</a>
+        </div>
+    </div>
+    <br>
+    <div class="container text-center bg-info text-white fs-4">
+        <div class="row">
+            <div class="col">
+                ผู้จัดทำเว็บไซต์ <br>
+                นางสาววรรณดา เมฆจินดา 65342310197-3 BIS3R2
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+{% load static %}
+{% block content %}
+    <br>
+    <h1 class="text-center bg-info rounded-pill">ประวัติการศึกษา</h1>
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+        <div class="col ">
+            <div class="card text-center">
+                <img src="{% static 'images/watdon.jpg' %}" class="rounded mx-auto d-block" alt="..." width="150px"
+                     height="150px ">
+                <div class="card-body">
+                    <h5 class="card-title">ประถมศึกษา</h5>
+                    <p class="card-text"> 2551-2556 โรงเรียนดอนเจดีย์ราษฎรบูรณะ</p>
+                    <p class="card-text"> เกรดเฉลี่ย : 3.83</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card text-center">
+                <img src="{% static 'images/t2.gif' %}" class="rounded mx-auto d-block" alt="..." width="150px"
+                     height="150px ">
+                <div class="card-body">
+                    <h5 class="card-title">มัธยมศึกษา</h5>
+                    <p class="card-text">2557-2559 โรงเรียนเทศบาล 2 ปราสาททอง</p>
+                    <p class="card-text"> เกรดเฉลี่ย : 3.60</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card text-center">
+                <img src="{% static 'images/udvc.jpg' %}" class="rounded mx-auto d-block" alt="..." width="150px"
+                     height="150px ">
+                <div class="card-body">
+                    <h5 class="card-title">ประกาศนียบัตรวิชาชีพ (ปวช)</h5>
+                    <p class="card-text">2560-2563 วิทยาลัยอาชีวศึกษาอุดรธานี สาขาคอมพิวเตอร์ธุรกิจ</p>
+                    <p class="card-text"> เกรดเฉลี่ย : 3.22</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card text-center">
+                <img src="{% static 'images/udtc.jpg' %}" class="rounded mx-auto d-block" alt="..." width="150px"
+                     height="150px">
+                <div class="card-body">
+                    <h5 class="card-title">ประกาศนียบัตรวิชาชีพขั้นสูง (ปวส)</h5>
+                    <p class="card-text">2564-2565 วิทยาลัยเทคนิคอุดรธานี สาขาเทคโนโลยีสารสนเทศ</p>
+                    <p class="card-text"> เกรดเฉลี่ย : 3.90</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="container text-center bg-info text-white fs-4">
+        <div class="row">
+            <div class="col">
+                ผู้จัดทำเว็บไซต์ <br>
+                นางสาววรรณดา เมฆจินดา 65342310197-3 BIS3R2
+            </div>
+        </div>
+    </div>
+{% endblock %}

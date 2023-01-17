@@ -1,0 +1,24 @@
+{% load static %}
+{% load fontawesome_5 %}
+{% fontawesome_5_static %}
+<b class="text-secondary"></b>
+
+
+<ul class="list-group ">
+    <li class="list-group-item active">เมนู:</li>
+    <li ><a href="{% url 'home' %}"class="list-group-item list-group-item-action ">
+        {% fa5_icon 'home' %}  หน้าแรก</a></li>
+    <li ><a href="{% url 'resume' %}"class="list-group-item list-group-item-action ">
+        {% fa5_icon 'fa-solid fa-user' %} ประวัติส่วนตัว</a></li>
+    <li ><a href="{% url 'educational' %}"class="list-group-item list-group-item-action">
+        {% fa5_icon 'fa-sharp fa-solid fa-graduation-cap' %} ประวัติการศึกษา</a></li>
+     <li ><a href="{% url 'interests' %}"class="list-group-item list-group-item-action">
+         {% fa5_icon 'fa-sharp fa-solid fa-hand-holding-heart' %} สิ่งที่สนใจ</a></li>
+     <li ><a href="{% url 'sale' %}"class="list-group-item list-group-item-action">
+         {% fa5_icon 'fa-sharp fa-solid fa-store' %} สิ่งที่เสนอขาย</a></li>
+    <li ><a href="{% url 'occupation' %}"class="list-group-item list-group-item-action">
+        {% fa5_icon 'fa-sharp fa-solid fa-user-tie' %} อาชีพใฝ่ฝันในอนาคต</a></li>
+    <li ><a href="{% url 'roleModel' %}"class="list-group-item list-group-item-action">
+        {% fa5_icon 'fa-sharp fa-solid fa-address-book' %} บุคคลต้นแบบ</a></li>
+
+</ul>
