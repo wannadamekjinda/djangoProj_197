@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+{#{% fontawesome_5_static %}#}
+{% block content %}
+ <br>
+    <div class="container ">
+  <div class="row">
+    <div class="col">
+      <h5 class="text-dark ">Name : {{ name }} </h5>
+    <h5 class="text-dark "> NickName : {{ nickname }}</h5>
+    <h5 class="text-dark "> Age : {{ age }}</h5>
+    <h5 class="text-dark "> Card Id : {{ cardId }}</h5>
+    <h5 class="text-dark "> Student Id :{{ stdId }}</h5>
+    </div>
+    <div class="col">
+       <h5 class="text-dark "> Ocuupation : {{ occupation }}</h5>
+    <h5 class="text-dark ">Gender : {{ gender }}</h5>
+    <h5 class="text-dark ">Height : {{ height }}</h5>
+    <h5 class="text-dark "> Favorite Color : {{ favoriteColor }}</h5>
+    <h5 class="text-dark "> Domicile : {{ domicile }}</h5>
+    </div>
+    <br>
+      <br>
+      <h3 class="rounded-pill text-center text-bg-secondary"> Product Table List</h3>
+    <table class="table table-success table-striped ">
+        <tr>
+            <th>Product </th><th>Price </th><th>Images </th>
+        </tr>
+
+        {% for product in products %}
+            <tr>
+                <td>{{ product.0 }}</td>
+                <td class="text">{{ product.1 }}</td>
+                <td><img src="{% static product.2 %} " width="50px" height="50px"> </td>
+
+            </tr>
+        {% endfor %}
+    </table>
+
+
+{% endblock %}
