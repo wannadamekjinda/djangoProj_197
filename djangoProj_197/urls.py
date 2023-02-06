@@ -31,6 +31,9 @@ urlpatterns = [
     path('keyboard',views.keyboard,name='keyboard'),
     path('speaker',views.speaker,name='speaker'),
     path('showData',views.showData,name='showData'),
+    path('inputProduct',views.inputProduct,name='inputProduct'),
+    path('listProduct',views.listProduct,name='listProduct'),
+    path('outputProduct',views.outputProduct,name='outputProduct'),
 ]
 
 

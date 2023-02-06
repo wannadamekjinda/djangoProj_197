@@ -1,4 +1,4 @@
-from django.shortcuts import render,HttpResponse
+from django.shortcuts import render,HttpResponse,redirect
 
 
 def base(request):
@@ -34,6 +34,15 @@ def speaker(reqeust):
 def keyboard(reqeust):
     return render(reqeust,"keyboard.html")
 
+def inputProduct(reqeust):
+    return render(reqeust,"inputProduct.html")
+
+def listProduct(reqeust):
+    return render(reqeust,"listProduct.html")
+
+def show(reqeust):
+    return render(reqeust,"show.html")
+
 def showData(requeust):
     name = "Wannada Mekjinda"
     nickname = "Aum"
@@ -61,3 +70,58 @@ def showData(requeust):
                'gender':gender,'height':height,'occupation':occupation,'favoriteColor':favoriteColor,
                'domicile':domicile,'products':products}
     return render(requeust,"Mydata.html",context)
+
+from ProfileApp.models import *
+from ProfileApp.forms import *
+
+
+lstOutProduct = []
+def listProduct(request):
+    organizer = "Wannada Mekjinda"
+    productType = "Telephone "
+    date = "07/02/66"
+    context = {'product': lstOutProduct ,'organizer':organizer,'productType':productType,'date':date}
+    return render(request, 'outputProduct.html', context)
+def newProduct(request):
+    if request.method == 'POST':
+        model = request.POST['model']
+        type = request.POST['type']
+        color = request.POST['color']
+        brand = request.POST['brand']
+        price = request.POST['price']
+        battery = request.POST['battery']
+        product = Product(battery, model, type, color, brand, price)
+        lstOutProduct.append(product)
+        return redirect('outputProduct')
+    else:
+        return render(request, 'listProduct.html')
+
+
+
+
+
+def inputProduct(request):
+    if request.method == "POST":
+        form = ProductForm(request.POST)
+        if form.is_valid():
+            form = form.cleaned_data
+            warranty = form.get('warranty')
+            model = form.get('model')
+            battery = form.get('battery')
+            color = form.get('color')
+            brand = form.get('brand')
+            price = form.get('price')
+            product = Product(warranty, model, battery, color, brand, price)
+            lstOutProduct.append(product)
+            return redirect('outputProduct')
+        else:
+            form = ProductForm(form)
+            context = {'form': form}
+            return render(request, 'inputProduct.html', context)
+    else:
+        form = ProductForm()
+        context = {'form': form}
+        return render(request, 'inputProduct.html', context)
+
+def outputProduct(request):
+    return render(request,'outputProduct.html')

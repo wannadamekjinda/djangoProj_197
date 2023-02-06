@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load fontawesome_5 %}
+{% fontawesome_5_static %}
+{% block content %}
+    <br>
+     <h3 class="rounded-pill text-center text-bg-primary"> Information Product </h3>
+    <table class="table table-secondary table-striped table-hover">
+        <div class="container ">
+            <div class="row">
+                <div class="col">
+                    <h5 class="text-dark ">Product Type : {{ productType }} </h5>
+                    <h5 class="text-dark "> Organizer : {{ organizer }}</h5>
+                    <h5 class="text-dark "> date : {{ date }}</h5>
+                </div>
+            </div>
+        </div>
+        <tr>
+            <th>Brand</th>
+            <th>Model</th>
+            <th>Battery</th>
+            <th>Color</th>
+            <th>Warranty</th>
+            <th>Price</th>
+            <th>Vat</th>
+            <th>Discount</th>
+            <th>Total</th>
+        </tr>
+        {% for products in product %}
+        <tr>
+            <td>{{ products.brand }}</td>
+            <td>{{ products.model }}</td>
+            <td>{{ products.battery }}</td>
+            <td>{{ products.color }}</td>
+            <td>{{ products.warranty }}</td>
+            <td>{{ products.price | floatformat:2 }}</td>
+            <td>{{ products.Vat | floatformat:2}}</td>
+            <td>{{ products.Discount | floatformat:2}}</td>
+            <td>{{ products.Total | floatformat:2}}</td>
+        </tr>
+    {% endfor %}
+    </table>
+
+    <div class="col col-12 text-center">
+        <a href="{% url 'inputProduct' %}" class="btn btn-primary">
+    <i class="fas fa-solid fa-plus"> Add Product </i>
+    </a>
+    </div>
+    </div>
+
+{% endblock %}
