@@ -4,6 +4,8 @@
 {% fontawesome_5_static %}
 {% block content %}
     <table class="table table-info">
+    <br>
+         <h3 class="rounded-pill text-center text-bg-primary"> Input Product </h3>
     <form  method="post" class="form-control">
         {% csrf_token %}
         {{ form.as_table }}

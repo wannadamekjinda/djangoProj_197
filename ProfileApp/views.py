@@ -113,7 +113,7 @@ def inputProduct(request):
             price = form.get('price')
             product = Product(warranty, model, battery, color, brand, price)
             lstOutProduct.append(product)
-            return redirect('outputProduct')
+            return redirect('listProduct')
         else:
             form = ProductForm(form)
             context = {'form': form}
